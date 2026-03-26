@@ -78,3 +78,32 @@ export interface AgentTokenStats {
   completion_tokens: number
   call_count: number
 }
+
+export interface TaskDistributionItem {
+  agent_name: string
+  task_count: number
+  token_usage: number
+  task_percentage: number
+  token_percentage: number
+}
+
+export interface TopTaskItem {
+  task_id: number
+  agent_name: string
+  username: string
+  total_tokens: number
+  prompt_tokens: number
+  completion_tokens: number
+  execution_time: number
+  status: string
+  create_time: string
+}
+
+export interface UserRankingItem {
+  user_id: number
+  username: string
+  dept: string
+  total_tokens: number
+  call_count: number
+  avg_tokens: number
+}
